@@ -1,0 +1,88 @@
+\documentclass[a4 paper, 12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+	\setlength{\parindent}{2.30em}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\usepackage{pdflscape}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{booktabs,tabularx}
+\usepackage{lscape}
+\usepackage{mathptmx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{wasysym}
+\usepackage{bm}
+\usepackage{xfrac}
+\usepackage{lipsum}
+\usepackage[top=4.572cm, bottom=3.175cm, left=3.81cm, right=3.175cm]{geometry}
+\usepackage{sectsty}  % section font size
+	\sectionfont{\normalsize}
+	\subsectionfont{\normalsize}
+	\subsubsectionfont{\normalsize}
+	\paragraphfont{\normalsize}
+	\subparagraphfont{\normalsize}
+\usepackage{etoolbox} % remove spaces before and after paragraph
+\usepackage{setspace} % control linespacing
+	\setstretch{1.5}
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{graphicx}
+	\graphicspath{{./Figure/}}
+	\DeclareGraphicsExtensions{.pdf,.jpeg,.jpg,.png}
+\usepackage{textcomp}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{caption}
+\captionsetup{format=hang, font=normalsize, labelfont=bf, justification=justified, labelsep=period}
+% Pagination
+\usepackage{fancyhdr}
+	\pagestyle{fancyplain}% <- use fancyplain instead fancy
+	\fancyhf{}
+	\fancyhead[R]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+% Algorithm
+\usepackage[ruled,vlined,linesnumbered,resetcount,algochapter]{algorithm2e}
+% Table
+\usepackage{multirow}
+% Icons
+\usepackage{fontawesome}
+% Hyperlinks
+\usepackage{hyperref} 
+\usepackage{cleveref}
+\makeatletter
+	\patchcmd{\@makechapterhead}{\vspace*{60\p@}}{}{}{}% Removes space above \chapter head
+	\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{}% Removes space above \chapter* head
+	\chapterfont{\normalsize \centering \MakeUppercase}
+\numberwithin{equation}{chapter}
+\makeatother
+% Table of Contents and References
+\usepackage[english]{babel}
+\addto\captionsenglish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Table of Contents}%
+  \renewcommand{\bibname}{References}
+}
+\thispagestyle{empty} 
+\begin{document}
+
+
+    %  Comment line if you want to hide from the presentation
+
+    \input{00_title_page}
+    \input{01_certification_of_panel_approval}
+    \input{02_abstract}
+    \input{03_acknowledgment}
+    \input{04_table_of_contents}
+    \input{05_chapter_1}
+    \input{06_chapter 2}
+    \input{07_chapter 3}
+    \input{08_chapter 4}
+    \input{09_chapter 5}
+    \input{10_references}
+    \input{11_appendix}
+    \input{12_curriculum_vitae}
+
+    
+\end{document}
